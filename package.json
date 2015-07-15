@@ -1,0 +1,39 @@
+{
+  "name": "skeleton",
+  "version": "0.1.0",
+  "description": "Skeleton for Lambda function",
+  "main": "index.js",
+  "lambdaRole": "arn:aws:iam::714374170300:role/HoNLambda",
+  "dependencies": {
+    "bluebird": "^2.9.33",
+    "request": "^2.58.0"
+  },
+  "devDependencies": {
+    "del": "^0.1.3",
+    "exec-wait": "^0.0.3",
+    "expect": "^1.6.0",
+    "gulp": "^3.9.0",
+    "gulp-apidoc": "0.0.3",
+    "gulp-awslambda": "^0.2.2",
+    "gulp-bump": "^0.1.10",
+    "gulp-cached": "^1.0.1",
+    "gulp-install": "^0.4.0",
+    "gulp-jshint": "^1.8.3",
+    "gulp-load-plugins": "^0.5.3",
+    "gulp-mocha": "^2.1.2",
+    "gulp-nsp": "^0.4.5",
+    "gulp-plumber": "^0.6.3",
+    "gulp-serve": "^0.2.0",
+    "gulp-using": "0.0.1",
+    "gulp-util": "^2.2.20",
+    "gulp-zip": "^3.0.2",
+    "mocha": "^2.2.5",
+    "run-sequence": "^0.3.6"
+  },
+  "scripts": {
+    "test": "gulp test",
+    "deploy": "gulp deploy"
+  },
+  "author": "Mikael Puittinen/SC5 Online Oy",
+  "license": "MIT"
+}
