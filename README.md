@@ -37,8 +37,7 @@ Run gulp tests.
 
     > gulp test
 
-Tests reside in the tests/directory
-A "pseudolambda" framework is provided to simulate the Lambda environment
+Tests reside in the tests/directory. Uses lambda-wrapper module to wrap the code.
 
 ## Deploying to AWS
 
@@ -51,6 +50,7 @@ This will create a new lamda function to the region defined in lambdaenv.json wi
 
 ## Release History
 
+* 2015/07/22 - v0.1.1 - Use lambda-wrapper instead of pseudolambda.
 * 2015/07/15 - v0.1.0 - Initial version of boilerplate
 
 
