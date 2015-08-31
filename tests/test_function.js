@@ -1,26 +1,26 @@
-var expect = require("expect");
-var pseudolambda = require("./pseudolambda");
-pseudolambda.init();
+var expect = require('expect');
+var lambda = require('lambda-wrapper').init();
 
-var blank = function () {};
-
-describe('skeleton', function() {
-  it('Returns the key1 of the input', function(done) {
-    pseudolambda.run({key1:'foobar'}).then(function(response) {
-      expect(response.key1).toMatch(/foobar/);
-      done();
-    }, blank).catch(function(error) {
-      done(error)
+describe('lambda-skeleton', function() {
+    it('Returns the key1 of the input', function(done) {
+        lambda.run({
+            key1: 'foobar'
+        }, function(error, response) {
+            if (error) {
+                return done(error);
+            }
+            expect(response.key1).toMatch(/foobar/);
+            done();
+        });
     });
-  });
-  it('Returns an error if key1 is missing', function(done) {
-    pseudolambda.run({key2:'foobar'}).then(null, function(error) {
-      expect(error).toMatch(/.*missing.*/);
-      done();
-    }, blank).catch(function(error) {
-      done(error)
+    
+    it('Returns an error if key1 is missing', function(done) {
+        lambda.run({
+            key2: 'foobar'
+        }, function(error, response) {
+            expect(error).toMatch(/.*missing.*/);
+            done();
+        });
     });
-  });
 });
-
 

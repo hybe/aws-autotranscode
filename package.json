@@ -1,9 +1,8 @@
 {
-  "name": "skeleton",
-  "version": "0.1.0",
+  "name": "lambda-skeleton",
+  "version": "0.1.1",
   "description": "Skeleton for Lambda function",
-  "main": "index.js",
-  "lambdaRole": "arn:aws:iam::714374170300:role/HoNLambda",
+  "main": "src/index.js",
   "dependencies": {
     "bluebird": "^2.9.33",
     "request": "^2.58.0"
@@ -27,6 +26,7 @@
     "gulp-using": "0.0.1",
     "gulp-util": "^2.2.20",
     "gulp-zip": "^3.0.2",
+    "lambda-wrapper": "0.0.1",
     "mocha": "^2.2.5",
     "run-sequence": "^0.3.6"
   },
