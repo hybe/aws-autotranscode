@@ -26,7 +26,7 @@
     "gulp-using": "0.0.1",
     "gulp-util": "^2.2.20",
     "gulp-zip": "^3.0.2",
-    "lambda-wrapper": "0.0.1",
+    "lambda-wrapper": "0.0.2",
     "mocha": "^2.2.5",
     "run-sequence": "^0.3.6"
   },
