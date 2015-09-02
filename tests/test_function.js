@@ -1,5 +1,7 @@
 var expect = require('expect');
-var lambda = require('lambda-wrapper').init();
+var lambda = require('lambda-wrapper');
+var lambdaFunc = require('../src/index.js');
+lambda.init(lambdaFunc);
 
 describe('lambda-skeleton', function() {
     it('Returns the key1 of the input', function(done) {
@@ -23,4 +25,3 @@ describe('lambda-skeleton', function() {
         });
     });
 });
-

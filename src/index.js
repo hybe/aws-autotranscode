@@ -7,13 +7,12 @@
  *
  * @apiSuccess {String} OutputKey 
  */
-
 module.exports = exports = {
     handler : function(event, context) {
-        if (event.key1 == null) {
+        if (typeof event.key1 === 'undefined') {
             context.fail(new Error('key1 missing'));
         } else {
-            context.succeed({'key1': event.key1});
+            context.succeed({ key1: event.key1 });
         }
     }
 };
