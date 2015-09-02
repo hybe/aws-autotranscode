@@ -19,7 +19,7 @@ var path = require('path'),
 the task context. These are mainly for repeating configuration items */
 
 var buildname = package.name + '_' + package.version;
-	buildname = buildname.replace(/[^0-9a-z_-]/g,'_');
+	buildname = buildname.replace(/[^A-Za-z0-9_-]/g,'_');
 
 /* Bump version number for package.json */
 // TODO Provide means for appending a patch id based on git commit id or md5 hash
