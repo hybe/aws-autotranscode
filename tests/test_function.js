@@ -25,4 +25,3 @@ describe('lambda-skeleton', function() {
         });
     });
 });
-
