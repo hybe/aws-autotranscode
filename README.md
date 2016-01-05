@@ -5,8 +5,7 @@ This is build based on the Lambda boilerplate by [SC5](http://sc5.io/), and fork
 ## Quick Start (run in the cloud)
 
 * Paste src/index.js content to a AWS Lambda code editor
-* Fill in the correct bucket names 
-* Change the copyright to match your company (no special characters allowed byt Elastic Transcoder)
+* Fill in the correct bucket names, metadata and pipeline ID
 * Set the script as handler for AWS S3 ObjectCreated (All) events, with a file extension filter for your media file type
 * Make sure the Lambda role has permissions to read and write to the buckets you chose. 
 
