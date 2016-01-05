@@ -1,23 +1,39 @@
-console.log('Loading function');
-var aws = require('aws-sdk');
-var s3 = new aws.S3();
+/*
+ * Copyright (C) 2016 Sami Pippuri
+ * HYBE Media Oy
+*/
 
-var eltr = new aws.ElasticTranscoder({
-    region: 'eu-west-1'
-});
+// BEGIN Lambda configuration
+//
 
-var pipelineId = '1451946760007-j3prqj';
+var pipelineId = '1451946760007-j3prqj'; // change to your pipeline!
+
+// AWS elastic transcoder presets
 var webPreset = '1351620000001-200050';
 var audio = '1351620000001-200071';
 var video = '1351620000001-200045';
 var video1M = '1351620000001-200035';
 var video1pM = '1351620000001-200025';
 var video2M = '1351620000001-200015';
-var prefix = '20160105/' 
 
-var targetBucket = 'hybe-media'
-var sourceBucket = 'hybe-transfer'
-var copyright = 'HYBE Media 2016'
+// configure your prefix or set as '' to put files to root of the bucket
+var prefix = '20160105/';
+
+// change these to match your S3 setup
+// note: transcoder is picky about characters in the metadata
+var targetBucket = 'target-media-bucket';
+var sourceBucket = 'media-source-bucket';
+var copyright = '';
+
+// BEGIN Lambda code
+console.log('Loading function');
+
+var aws = require('aws-sdk');
+var s3 = new aws.S3();
+
+var eltr = new aws.ElasticTranscoder({
+    region: 'eu-west-1' // change to your region
+});
 
 exports.handler = function(event, context) {
     console.log('Received event:', JSON.stringify(event, null, 2));

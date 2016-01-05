@@ -4,7 +4,25 @@ This is build based on the Lambda boilerplate by [SC5](http://sc5.io/), and fork
 
 ## Quick Start (run in the cloud)
 
-Paste src/index.js content to a AWS Lambda code editor, fill in the correct bucket names and set the script as handler for AWS S3 ObjectCreated (All) events. Make sure the Lambda role has permissions to read and write to the buckets you chose. Also, change the copyright to match your company (no special characters allowed byt Elastic Transcoder).
+* Paste src/index.js content to a AWS Lambda code editor
+* Fill in the correct bucket names 
+* Change the copyright to match your company (no special characters allowed byt Elastic Transcoder)
+* Set the script as handler for AWS S3 ObjectCreated (All) events, with a file extension filter for your media file type
+* Make sure the Lambda role has permissions to read and write to the buckets you chose. 
+
+### Manifest file
+
+The code assumes the following structure in the source bucket:
+    [bucket-root]/[mediaID]/manifest.json
+    [bucket-root]/[mediaID]/[media-file-name].[ext]
+
+Take a look at the sample directory for a sample. The manifest file is mainly used in our setup to copy human-selected thumbnails and metadata to the right place along the publishing process, but the script could be adapted to use just the media file as input. 
+
+*NOTE* the manifest file must be present in the directory when the media file triggers the lambda, otherwise the script will fail. This has not been a problem in the [HYBE.com](http://hybe.com) setup at least - the media file transfer takes the longest time over the metadata.
+
+### Outputs
+
+By default, the script generates HLS playlists for adaptive streaming to compatible clients - modern browsers and devices - using the AWS Elastic Transcoder presets. These can be easily changed, added, removed etc. 
 
 ## Installation for local testing
 
