@@ -12,6 +12,7 @@ This is build based on the Lambda boilerplate by [SC5](http://sc5.io/), and fork
 ### Manifest file
 
 The code assumes the following structure in the source bucket:
+
     [bucket-root]/[mediaID]/manifest.json
     [bucket-root]/[mediaID]/[media-file-name].[ext]
 
