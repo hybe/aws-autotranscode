@@ -112,7 +112,7 @@ function sendVideoToET(manifest, callback){
     ],
     UserMetadata: {
       date: '' + manifest.date,
-      copyright: 'HYBE Media 2016'
+      copyright: copyright
     },
     Playlists: [
         {
@@ -144,7 +144,7 @@ function sendVideoToET(manifest, callback){
   function thumbnail(manifest, callback) {
       var thumb = {
         Bucket: sourceBucket,
-        Key: manifest.mediaID + '/' + manifest.mediaID + '_large.jpg'
+        Key: manifest.mediaID + '/' + manifest.thumbnails[0]
       }
       s3.getObject(thumb, function(err, data) {
         if (err) {
@@ -153,7 +153,7 @@ function sendVideoToET(manifest, callback){
         } else {
             var dest = {
                 Bucket: targetBucket,
-                Key: prefix + manifest.mediaID + '/' + manifest.mediaID + '_large.jpg',
+                Key: prefix + manifest.mediaID + '/' + manifest.thumbnails[0],
                 Body: data.Body,
                 ACL: 'public-read'
             }

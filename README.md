@@ -16,7 +16,14 @@ The code assumes the following structure in the source bucket:
     [bucket-root]/[mediaID]/manifest.json
     [bucket-root]/[mediaID]/[media-file-name].[ext]
 
-Take a look at the sample directory for a sample. The manifest file is mainly used in our setup to copy human-selected thumbnails and metadata to the right place along the publishing process, but the script could be adapted to use just the media file as input. 
+Take a look at the sample directory for a sample. The manifest file is mainly used in our setup to copy human-selected thumbnails and metadata to the right place along the publishing process, but the script could be adapted to use just the media file as input. ´´´manifest.json´´´ has the following structure:
+
+    {
+        "mediaID":"0daa547b24de47cab0b1fdd20fd5dad0",
+        "date":1441257874000,
+        "thumbnails":["0daa547b24de47cab0b1fdd20fd5dad0_large.jpg"],
+        "media":"0daa547b24de47cab0b1fdd20fd5dad0_hybe_teaser_45s-v2.mp4"
+    }
 
 *NOTE* the manifest file must be present in the directory when the media file triggers the lambda, otherwise the script will fail. This has not been a problem in the [HYBE.com](http://hybe.com) setup at least - the media file transfer takes the longest time over the metadata.
 
