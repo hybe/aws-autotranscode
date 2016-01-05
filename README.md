@@ -16,7 +16,7 @@ The code assumes the following structure in the source bucket:
     [bucket-root]/[mediaID]/manifest.json
     [bucket-root]/[mediaID]/[media-file-name].[ext]
 
-Take a look at the sample directory for a sample. The manifest file is mainly used in our setup to copy human-selected thumbnails and metadata to the right place along the publishing process, but the script could be adapted to use just the media file as input. ´manifest.json´ has the following structure:
+Take a look at the sample directory for a sample. The manifest file is mainly used in our setup to copy human-selected thumbnails and metadata to the right place along the publishing process, but the script could be adapted to use just the media file as input. manifest.json has the following structure:
 
     {
         "mediaID":"0daa547b24de47cab0b1fdd20fd5dad0",
