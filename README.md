@@ -2,13 +2,17 @@
 
 This is build based on the Lambda boilerplate by [SC5](http://sc5.io/), and forking the [Sitebase example](https://gist.github.com/Sitebase/1004af7d738929d0a7f1) on github. 
 
-## Installation
+## Quick Start (run in the cloud)
 
-### Prerequisites 
+Paste src/index.js content to a AWS Lambda code editor, fill in the correct bucket names and set the script as handler for AWS S3 ObjectCreated (All) events. Make sure the Lambda role has permissions to read and write to the buckets you chose. Also, change the copyright to match your company (no special characters allowed byt Elastic Transcoder).
+
+## Installation for local testing
+
+### Prerequisites
 
 Clone the project and trigger installation of the project dependencies by
 
-    > git clone https://github.com/SC5/sc5-aws-lambda-boilerplate.git [module name]
+    > git clone https://github.com/hybe/aws-autotranscode.git [module name]
     > cd [module name]
     > npm install
 
@@ -31,7 +35,7 @@ Set up your module information into package.json prior to deployment
     gulpfile.js     The gulpfile used for deployment
     package.json    The package file for the module. Defines the function name, version and dependencies
 
-## Testing
+## Testing locally
 
 Run gulp tests. 
 
