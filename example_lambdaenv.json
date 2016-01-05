@@ -1,4 +1,0 @@
-{
-	"Role" : "arn:aws:iam::ACCOUNT_ID:role/LAMBDA_ROLE_NAME",
-	"Region" : "eu-west-1"
-}

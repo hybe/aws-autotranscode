@@ -1,9 +1,10 @@
 {
-  "name": "lambda-skeleton",
-  "version": "0.1.1",
-  "description": "Skeleton for Lambda function",
+  "name": "hybe-transcode",
+  "version": "0.1.0",
+  "description": "exec me based on S3 object creation event",
   "main": "src/index.js",
   "dependencies": {
+    "aws-sdk": "*"
   },
   "devDependencies": {
     "del": "^0.1.3",
@@ -31,6 +32,6 @@
     "test": "gulp test",
     "deploy": "gulp deploy"
   },
-  "author": "Mikael Puittinen/SC5 Online Oy",
+  "author": "Sami Pippuri / HYBE Media Oy",
   "license": "MIT"
 }
