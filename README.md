@@ -1,6 +1,6 @@
 # AWS Lambda to encode incoming media files automagically
 
-This is build based on the Lambda boilerplate by [SC5](http://sc5.io/), and forking the [Sitebase example](https://gist.github.com/Sitebase/1004af7d738929d0a7f1) on github. 
+This is an AWS Lambda Javascript function that works as an automated HLS streaming media encoder triggered by new files in S3, by creating jobs in AWS Elastic Transcoder. It's compatible with testing locally with node.js thanks to the Lambda boilerplate by [SC5](http://sc5.io/). Inspiration from the [Sitebase example](https://gist.github.com/Sitebase/1004af7d738929d0a7f1) on github. 
 
 ## Quick Start (run in the cloud)
 

@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2016 Sami Pippuri
  * HYBE Media Oy
+ * See LICENSE for the copy of MIT license
 */
 
 // BEGIN Lambda configuration
