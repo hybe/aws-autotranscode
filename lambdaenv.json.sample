@@ -1,0 +1,4 @@
+{
+	"Role" : "arn:aws:iam::123456789:role/Name",
+	"Region" : "eu-west-1"
+}
